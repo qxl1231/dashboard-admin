@@ -19,8 +19,10 @@ COPY package*.json ./
 COPY . /home/node/app
 
 #RUN npm run build(build 前端代码,如果需要的话)
-#RUN cd antd&&npm install&&npm run build&&cd ..
-RUN npm install&&node .
+#RUN cd antd
+#RUN npm install&&npm run build
+#RUN cd ..
+RUN npm install -g cnpm&&cnpm i&&node .
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
