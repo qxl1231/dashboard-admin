@@ -19,7 +19,7 @@ COPY  package*.json ./
 COPY  . .
 
 #RUN npm run build(build 前端代码,如果需要的话)
-RUN cd antd&&npm i -g yarn&&yarn install&&npm run build&&cd ..
+RUN cd antd&&sudo npm i -g yarn&&yarn install&&npm run build&&cd ..
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
