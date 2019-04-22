@@ -18,12 +18,12 @@ COPY package*.json ./
 
 # Bundle app source code
 COPY . /home/node/app
+RUN npm -g config set user root
 
 #RUN npm run build(build 前端代码,如果需要的话)
-#RUN cd antd
-#RUN npm install&&npm run build
-#RUN cd ..
-RUN npm -g config set user root
+RUN cd antd
+RUN npm install yarn -g&&yarn install&&npm run build
+RUN cd ..
 
 RUN npm install -g cnpm&&cnpm i
 
