@@ -3,7 +3,6 @@ FROM node
 
 # Set to a non-root built-in user `node`
 USER node
-USER root
 
 # Create app directory (with user `node`)
 RUN mkdir -p /home/node/app
@@ -13,7 +12,7 @@ WORKDIR /home/node/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY package*.json ./
+#COPY package*.json ./
 
 
 # Bundle app source code
