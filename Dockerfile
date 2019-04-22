@@ -16,7 +16,7 @@ COPY --chown=node package*.json ./
 
 
 # Bundle app source code
-COPY --chown=node . .
+#COPY --chown=node . .
 
 #RUN npm run build(build 前端代码,如果需要的话)
 RUN cd antd&&npm run build&&cd ..
