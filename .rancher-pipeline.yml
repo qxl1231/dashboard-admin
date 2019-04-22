@@ -15,5 +15,17 @@ stages:
     event:
       include:
       - push
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+    when:
+      event:
+        include:
+        - push
+  when:
+    event:
+      include:
+      - push
 timeout: 60
 notification: {}
