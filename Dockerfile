@@ -1,8 +1,8 @@
 # Check out https://hub.docker.com/_/node to select a new base image
-FROM node
+FROM yarn
 
 # Set to a non-root built-in user `node`
-USER node
+USER yarn
 
 # Create app directory (with user `node`)
 RUN mkdir -p /home/node/app
@@ -19,7 +19,7 @@ COPY  package*.json ./
 COPY  . .
 
 #RUN npm run build(build 前端代码,如果需要的话)
-RUN cd antd&&npm -g config set user root&&npm i -g yarn&&yarn install&&npm run build&&cd ..
+RUN cd antd&&yarn install&&npm run build&&cd ..
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
