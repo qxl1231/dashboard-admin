@@ -19,7 +19,7 @@ COPY --chown=node package*.json ./
 COPY --chown=node . .
 
 #RUN npm run build(build 前端代码,如果需要的话)
-#RUN cd vue-antd-admin&&npm run build&&cd ..
+#RUN cd antd&&npm run build&&cd ..
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
