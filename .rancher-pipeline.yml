@@ -7,6 +7,10 @@ stages:
       tag: admin
       pushRemote: true
       registry: 127.0.0.1:34883
+    when:
+      event:
+        include:
+        - push
   when:
     event:
       include:
