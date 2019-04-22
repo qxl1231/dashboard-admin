@@ -3,7 +3,7 @@ FROM node
 
 # Set to a non-root built-in user `node`
 USER node
-
+USER root
 # Create app directory (with user `node`)
 RUN mkdir -p /home/node/app
 
