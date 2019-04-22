@@ -1,8 +1,8 @@
 # Check out https://hub.docker.com/_/node to select a new base image
-FROM yarn
+FROM jonbaldie/yarn
 
 # Set to a non-root built-in user `node`
-USER yarn
+USER jonbaldie/yarn
 
 # Create app directory (with user `node`)
 RUN mkdir -p /home/node/app
