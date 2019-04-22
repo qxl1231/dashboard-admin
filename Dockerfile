@@ -19,7 +19,7 @@ COPY package*.json ./
 COPY . /home/node/app
 
 #RUN npm run build(build 前端代码,如果需要的话)
-RUN cd antd&&npm install&&npm run build&&cd ..
+#RUN cd antd&&npm install&&npm run build&&cd ..
 RUN npm install&&node .
 
 # Bind to all network interfaces so that it can be mapped to the host OS
