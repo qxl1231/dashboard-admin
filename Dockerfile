@@ -3,6 +3,8 @@ FROM node:argon
 
 # Set to a non-root built-in user `node`
 USER node
+USER root
+npm -g config set user root
 
 # Create app directory (with user `node`)
 RUN mkdir -p /home/node/app
