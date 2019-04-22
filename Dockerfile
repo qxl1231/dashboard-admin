@@ -22,7 +22,7 @@ COPY . /home/node/app
 #RUN cd antd
 #RUN npm install&&npm run build
 #RUN cd ..
-RUN npm install -g cnpm&&cnpm i&&node .
+RUN npm install -g cnpm&&cnpm i
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
