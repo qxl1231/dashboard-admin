@@ -12,11 +12,11 @@ WORKDIR /home/node/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY --chown=node package*.json ./
+COPY  package*.json ./
 
 
 # Bundle app source code
-COPY --chown=node . .
+COPY  . .
 
 #RUN npm run build(build 前端代码,如果需要的话)
 RUN cd antd&&npm i -g yarn&&yarn install&&npm run build&&cd ..
