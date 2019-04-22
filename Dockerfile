@@ -22,10 +22,11 @@ RUN npm -g config set user root
 
 #RUN npm run build(build 前端代码,如果需要的话)
 RUN cd antd
-RUN npm install yarn -g&&yarn install&&npm run build
+RUN npm install -g cnpm
+RUN cnpm i yarn -g&&yarn install&&npm run build
 RUN cd ..
 
-RUN npm install -g cnpm&&cnpm i
+RUN cnpm i
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
