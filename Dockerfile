@@ -16,7 +16,7 @@ COPY package*.json ./
 
 
 # Bundle app source code
-COPY . .
+COPY . /home/node/app
 
 #RUN npm run build(build 前端代码,如果需要的话)
 RUN cd antd&&npm install&&npm run build&&cd ..
