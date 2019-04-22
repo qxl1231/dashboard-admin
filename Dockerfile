@@ -21,9 +21,8 @@ COPY . /home/node/app
 RUN npm -g config set user root
 
 #RUN npm run build(build 前端代码,如果需要的话)
-RUN cd antd
 RUN npm install -g cnpm yarn
-RUN yarn install&&npm run build
+RUN cd antd&&yarn install&&npm run build
 RUN cd ..
 
 RUN cnpm i
