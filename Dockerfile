@@ -1,5 +1,5 @@
 # Check out https://hub.docker.com/_/node to select a new base image
-FROM node:argon
+FROM node
 
 # Set to a non-root built-in user `node`
 USER node
@@ -22,8 +22,8 @@ RUN npm -g config set user root
 
 #RUN npm run build(build 前端代码,如果需要的话)
 RUN cd antd
-RUN npm install -g cnpm
-RUN cnpm i yarn -g&&yarn install&&npm run build
+RUN npm install -g cnpm yarn
+RUN yarn install&&npm run build
 RUN cd ..
 
 RUN cnpm i
