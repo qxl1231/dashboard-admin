@@ -14,15 +14,15 @@ WORKDIR /home/node/app
 # where available (npm@5+)
 COPY --chown=node package*.json ./
 
-RUN npm ui
 
 # Bundle app source code
 COPY --chown=node . .
 
-RUN npm run build
+#RUN npm run build
+RUN cd vue-antd-admin&&npm run build&&cd ..
 
 # Bind to all network interfaces so that it can be mapped to the host OS
-ENV HOST=0.0.0.0 PORT=3066
+ENV HOST=0.0.0.0 PORT=3067
 
 EXPOSE ${PORT}
 CMD [ "node", "." ]
