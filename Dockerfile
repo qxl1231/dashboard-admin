@@ -1,5 +1,5 @@
-# Check out https://hub.docker.com/_/node to select a new base image(使用精简版本缩减images包大小)
-FROM node:slim
+# Check out https://hub.docker.com/_/node to select a new base image(不能使用精简版本缩减images包大小)
+FROM node
 
 # Set to a non-root built-in user `node`
 USER node
