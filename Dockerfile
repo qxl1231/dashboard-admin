@@ -4,7 +4,6 @@ FROM node:argon
 # Set to a non-root built-in user `node`
 USER node
 USER root
-npm -g config set user root
 
 # Create app directory (with user `node`)
 RUN mkdir -p /home/node/app
@@ -25,6 +24,7 @@ COPY . /home/node/app
 #RUN npm install&&npm run build
 #RUN cd ..
 RUN npm install -g cnpm&&cnpm i
+RUN npm -g config set user root
 
 # Bind to all network interfaces so that it can be mapped to the host OS
 ENV HOST=0.0.0.0 PORT=3067
