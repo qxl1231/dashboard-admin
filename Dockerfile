@@ -4,10 +4,9 @@ FROM node
 #LABEL maintainer "278931058@qq.com"
 
 # Set to a non-root built-in user `node`
-USER node
 USER root
 # Create app directory (with user `node`)
-ENV PROJECT_DIR=/home/node/app
+ENV PROJECT_DIR=/home/my/app
 RUN mkdir -p $PROJECT_DIR
 
 WORKDIR $PROJECT_DIR
