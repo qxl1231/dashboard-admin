@@ -6,10 +6,10 @@ FROM node
 # Set to a non-root built-in user `node`
 USER root
 # Create app directory (with user `node`)
-ENV PROJECT_DIR=/home/my/app
+ENV PROJECT_DIR=/home/node/app
 RUN mkdir -p $PROJECT_DIR
 
-WORKDIR $PROJECT_DIR
+ WORKDIR $PROJECT_DIR
 COPY package.json $PROJECT_DIR
 COPY . $PROJECT_DIR
 
